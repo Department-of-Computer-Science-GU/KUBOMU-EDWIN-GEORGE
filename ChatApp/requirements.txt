@@ -1,0 +1,4 @@
+asgiref==3.5.2
+channels==4.0.0
+cryptography==39.0.0
+Django==4.0.5
