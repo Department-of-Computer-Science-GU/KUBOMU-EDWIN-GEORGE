@@ -1,0 +1,21 @@
+/* Inbox styling */
+.inbox-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.inbox-container h2 {
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.message-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

@@ -1,0 +1,20 @@
+/* General body style */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+h2 {
+    text-align: center; /* Center the heading */
+    color: #333; /* Darker text color for better readability */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* No messages */
+.no-messages {
+    text-align: center;
+    color: #888;
+}

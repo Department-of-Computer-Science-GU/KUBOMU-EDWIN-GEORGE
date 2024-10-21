@@ -1,0 +1,34 @@
+/* css/compose.css */
+
+/* Container for the compose form */
+.compose-container {
+    max-width: 600px; /* Restrict width for better focus */
+    margin: 50px auto; /* Center the container */
+    padding: 30px; /* Space inside the container */
+    background-color: white; /* White background for form */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Header styling */
+h2 {
+    text-align: center; /* Center the heading */
+    color: #333; /* Darker text color for better readability */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Form button styling */
+button {
+    padding: 12px 20px; /* Space inside button */
+    background-color: #4CAF50; /* Green button */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 6px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer on hover */
+    margin-top: 10px; /* Space above button */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
