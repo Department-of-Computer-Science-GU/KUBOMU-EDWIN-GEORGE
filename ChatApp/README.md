@@ -20,47 +20,52 @@ To set up the project locally, follow these steps:
    ```bash
    git clone https://github.com/Department-of-Computer-Science-GU/KUBOMU-EDWIN-GEORGE.git
 
-	2.	Navigate to the project directory:
+2. Navigate to the project directory:
+     ```bash
 
-cd ChatApp
-
-
-	3.	Create a virtual environment:
-
-python -m venv venv
+          cd ChatApp
 
 
-	4.	Activate the virtual environment:
+3. Create a virtual environment:
+   	  ```bash
+   
 
-# For Windows
-venv\Scripts\activate
-
-# For macOS/Linux
-source venv/bin/activate
+         python -m venv venv
 
 
-	5.	Install the required packages:
+4. Activate the virtual environment:
+        ```bash
 
-pip install -r requirements.txt
+       # For Windows
+        venv\Scripts\activate
+
+       # For macOS/Linux
+        source venv/bin/activate
+
+5. Install the required packages:
+   		  ```bash
+
+        pip install -r requirements.txt
 
 
-	6.	Run database migrations:
+6. Run database migrations:
+       ```bash
 
-python manage.py migrate
+        python manage.py migrate
 
+7. Collect static files (as they are not uploaded):
+       ```bash
 
-	7.	Collect static files (as they are not uploaded):
-
-python manage.py collectstatic
+       python manage.py collectstatic
 
 You will be prompted to confirm the action. Type yes to proceed.
 
-	8.	Start the development server:
+8. Start the development server:
+    ```bash
+      python manage.py runserver
 
-python manage.py runserver
 
-
-	9.	Open your browser and go to http://127.0.0.1:8000/.
+9. Open your browser and go to http://127.0.0.1:8000/.
 
 Usage
 
