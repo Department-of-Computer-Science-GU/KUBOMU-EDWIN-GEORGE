@@ -1,0 +1,43 @@
+<!-- messaging/templates/messaging/inbox.html -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inbox</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}"> <!-- Base styles -->
+    <link rel="stylesheet" href="{% static 'css/inbox.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="{% url 'messaging:inbox' %}">Inbox</a>
+            <a href="{% url 'messaging:compose' %}">Compose</a>
+            <a href="{% url 'messaging:logout' %}">Logout</a>
+        </div>
+    </nav>
+    
+    <div class="content">
+        <div class="inbox-container">
+            <h2>Inbox</h2>
+            <div class="message-list">
+                {% for message in messages %}
+                    <div class="message-item {% if not message.is_read %}unread{% endif %}">
+                        <a href="{% url 'message_view' message.id %}" class="message-link">
+                            <strong>{{ message.sender.username }}</strong> - <em>{{ message.subject }}</em>
+                        </a>
+                        <p class="message-preview">{{ message.preview }}</p>
+                        <span class="message-date">{{ message.created_at|date:"F j, Y, g:i a" }}</span>
+                    </div>
+                {% empty %}
+                    <p class="no-messages">No messages to show.</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!-- messaging/templates/messaging/message_sent.html -->
+
+{% extends 'base_generic.html' %}
+
+{% block content %}
+<div class="message-view-container">
+    <div class="message-header">
+        <h2>Message Sent Successfully!</h2>
+    </div>
+    <div class="message-info">
+        <p>Your message has been sent successfully. Thank you!</p>
+    </div>
+    <div class="message-actions">
+        <a class="btn-reply" href="{% url 'compose' %}">Send Another Message</a>
+    </div>
+</div>
+{% endblock %}

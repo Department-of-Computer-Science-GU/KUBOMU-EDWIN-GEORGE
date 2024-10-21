@@ -1,0 +1,35 @@
+<!-- messaging/templates/messaging/compose.html -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compose Message</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}"> <!-- Base styles -->
+    <link rel="stylesheet" href="{% static 'css/compose.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="{% url 'messaging:inbox' %}">Inbox</a>
+            <a href="{% url 'messaging:compose' %}">Compose</a>
+            <a href="{% url 'messaging:logout' %}">Logout</a>
+        </div>
+    </nav>
+    
+    <div class="content">
+        <div class="compose-container">
+            <h2>Compose New Message</h2>
+            <form id="message-form" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}  <!-- Render the form -->
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>

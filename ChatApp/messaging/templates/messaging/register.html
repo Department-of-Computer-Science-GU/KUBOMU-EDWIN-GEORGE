@@ -1,0 +1,22 @@
+<!-- messaging/templates/messaging/register.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">  <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h2>Register</h2>
+        <form method="POST" class="registration-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Register</button>
+        </form>
+        <p class="login-link">Already have an account? <a href="{% url 'login' %}">Log in</a></p>
+    </div>
+</body>
+</html>

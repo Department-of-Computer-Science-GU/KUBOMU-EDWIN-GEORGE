@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Message</title>
+    <link rel="stylesheet" href="{% static 'css/message_view.css' %}"> <!-- Styles specific to this page -->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}"> <!-- Base styles -->
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="{% url 'messaging:inbox' %}">Inbox</a>
+            <a href="{% url 'messaging:compose' %}">Compose</a>
+            <a href="{% url 'messaging:logout' %}">Logout</a>
+        </div>
+    </nav>
+    
+    <div class="content">
+        <div class="message-view-container">
+            <div class="message-header">
+                <h2>{{ message.subject }}</h2>
+            </div>
+            
+            <div class="message-info">
+                <p><strong>From:</strong> {{ message.sender.username }}</p>
+                <p><strong>Sent:</strong> {{ message.timestamp|date:"F j, Y, g:i a" }}</p>
+            </div>
+            
+            <div class="message-body">
+                <p>{{ message.content }}</p>
+            </div>
+
+            <div class="message-actions">
+                <a href="{% url 'messaging:compose' %}?reply_to={{ message.id }}" class="btn-reply">Reply</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>
