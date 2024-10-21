@@ -4,7 +4,7 @@ A collection of Python programming challenges ranging from beginner to advanced 
 
 
 
-Each folder includes Python scripts (`.py` files) and sometimes additional files (e.g., input data files) for solving the challenges.
+Each folder includes Python scripts (`.py` files) and sometimes additional files (e.g., requirements, screenshots)
 
 ## Challenges
 
