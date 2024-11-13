@@ -30,9 +30,6 @@ def fetch_random_fact():
 def fun_fact_app():
     """
     Fun Fact Web App
-
-    This function sets up the web page with a header, introductory text, and buttons
-    to generate a fun fact, toggle dark mode, refresh the page, and like/unlike the fact.
     """
     global fact_count, liked
 
@@ -44,15 +41,8 @@ def fun_fact_app():
 
     # Function to handle fact generation
     def generate_fact():
-        """
-        Generates a new fun fact and displays it on the page.
-
-        This function increments the fact count, fetches a new fact, plays a sound,
-        and displays the fact on the page.
-        """
-        global fact_count
+        global fact_count, liked
         fact_count += 1  # Increment fact count
-        global liked
         liked = False  # Reset liked status when a new fact is generated
         with put_loading():  # Display a loading spinner
             fact = fetch_random_fact()  # Fetch fact
@@ -88,6 +78,15 @@ def fun_fact_app():
             document.getElementById('mode-toggle').innerHTML = '<i class="fas fa-sun"></i>';
             document.getElementById('mode-toggle').style.color = '#FFD700';  // Yellow color for sun icon
         }
+        // Update text color for specific elements
+        var elements = document.querySelectorAll('h2, p, button, #like-status');
+        elements.forEach(function(element) {
+            if (currentMode === 'dark') {
+                element.style.color = '#333';
+            } else {
+                element.style.color = '#fff';
+            }
+        });
     }
 
     function toggle_like() {
@@ -96,15 +95,17 @@ def fun_fact_app():
         if (likeButton.style.backgroundColor === 'rgb(76, 175, 80)') {
             likeButton.style.backgroundColor = '#a5d6a7';
             unlikeButton.style.backgroundColor = '#f44336';
-            likeButton.innerHTML = '👍 Like';
+            likeButton.innerHTML = '👍 Liked';
             unlikeButton.innerHTML = '👎 Unlike';
             document.getElementById('like-status').innerHTML = 'You liked this fact!';
+            liked = true;  // Set liked to true
         } else {
             likeButton.style.backgroundColor = '#4CAF50';
             unlikeButton.style.backgroundColor = '#a5d6a7';
             likeButton.innerHTML = '👍 Like';
             unlikeButton.innerHTML = '👎 Unlike';
             document.getElementById('like-status').innerHTML = 'You disliked this fact!';
+            liked = false;  // Set liked to false
         }
     }
     """
