@@ -75,9 +75,6 @@ Usage
 	•	Messages are encrypted for security.
 	•	The application is designed for real-time messaging.
 
-Note
-
-## Screenshots
 
 ## Screenshots
 
@@ -90,6 +87,7 @@ Note
 ### Liked Fact
 ![Compose](screenshots/compose.png)
 
+## Note
 
 This project is currently in progress. Some features are still missing, including:
 
