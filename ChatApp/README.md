@@ -77,6 +77,20 @@ Usage
 
 Note
 
+## Screenshots
+
+## Screenshots
+
+### Light Mode
+![Login](screenshots/login.png)
+
+### Dark Mode
+![Inbox](screenshots/inbox.png)
+
+### Liked Fact
+![Compose](screenshots/compose.png)
+
+
 This project is currently in progress. Some features are still missing, including:
 
 	•	Group chat functionality
