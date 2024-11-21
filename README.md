@@ -28,3 +28,4 @@ To get started with the challenges:
    ```bash
    git clone https://github.com/Department-of-Computer-Science-GU/KUBOMU-EDWIN-GEORGE.git
    cd KUBOMU-EDWIN-GEORGE
+   cd whatsapp_spam_bot

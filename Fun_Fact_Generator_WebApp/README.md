@@ -29,6 +29,7 @@ Fun Fact Generator is a simple web application that fetches and displays random 
     ```sh
     git clone https://github.com/Department-of-Computer-Science-GU/KUBOMU-EDWIN-GEORGE.git
     cd KUBOMU-EDWIN-GEORGE
+    cd Fun_Fact_Generator_WebApp
     ```
 
 2. **Install dependencies**:
@@ -38,7 +39,7 @@ Fun Fact Generator is a simple web application that fetches and displays random 
 
 3. **Run the server**:
     ```sh
-    python app.py
+    python Fun_Fact_App.py
     ```
 
 4. **Open your browser** and navigate to `http://localhost:8080`.
