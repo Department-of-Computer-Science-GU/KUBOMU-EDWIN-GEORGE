@@ -78,13 +78,13 @@ Usage
 
 ## Screenshots
 
-### Light Mode
+### Login Page
 ![Login](screenshots/login.png)
 
-### Dark Mode
+### Inbox Page
 ![Inbox](screenshots/inbox.png)
 
-### Liked Fact
+### Compose New
 ![Compose](screenshots/compose.png)
 
 ## Note
